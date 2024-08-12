@@ -1,0 +1,84 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  min-height: 80vh;
+}
+
+.back {
+  
+  backdrop-filter: blur(40px);
+  border: none;
+  border-radius: 16px;
+  /* border-radius: 50% 20% / 10% 40%; */
+  /* box-shadow: rgba(0, 0, 0, 0.50) 0px 10px 15px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.bright-back {
+  box-shadow: rgba(247, 247, 247, 0.158) 10px 10px 30px 10px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+}
+
+
+.filter-green {
+  filter: invert(52%) sepia(13%) saturate(3236%) hue-rotate(92deg) brightness(92%) contrast(83%);
+}
+
+.filter-gray {
+  /* color: #b9afaf3a; */
+  filter: invert(72%) sepia(0%) saturate(37%) hue-rotate(141deg) brightness(107%) contrast(83%);
+  transition: all ease-in 10ms;
+}
+
+/* anmation */
+
+.apear {
+  animation: apear 1s 1 ;
+}
+.disapear {
+  animation: disapear 1s 1;
+}
+
+@keyframes apear {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes disapear {
+  0%{
+    opacity : 100%;
+    
+  }
+  40%{
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+  }
+}
+
+
+
+
